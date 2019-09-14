@@ -1,0 +1,260 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Friends Link signup</title>
+        <script type="text/javascript" src="{%static 'js/signuppc.js'%}"></script>
+        <style>
+        body{
+          padding: 0px;
+          margin:0px;
+        }
+            #body{
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 710px;
+            }
+            #header{
+                background: #f44242;
+                width: 100%;
+                height: 100px;
+
+            }
+            h1{
+                line-height: 100px;
+                margin-top: 0px;
+            }
+            #heading{
+                color: white;
+                text-align: center;
+                font-size: 30px;
+                height: 100px;
+                float: left;
+                width: 45%;
+            }
+            #input{
+                width: 35%;
+                float: right;
+                margin-right: 10px;
+                margin-top: 20px;
+                color: white;
+            }
+            #create{
+                width: 50%;
+                float: right;
+                height: auto;;
+            }
+            #img{
+                float: left;
+                width: 45%;
+                }
+            ul{
+                margin-left: 80px;
+                margin-top: 30px;
+                list-style: none;
+            }
+            ul li{
+                width: 80px;
+                display: inline;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 18px;
+                position: relative;
+                padding-right: 3px;
+                padding-top: 0px;
+              }
+            ul ul {
+                display: none;
+            }
+            ul li a{
+                color: #3B5998;
+                text-decoration: none;
+            }
+            ul li:hover a{
+                text-decoration: underline;
+            }
+            span{
+                margin-top: 1px;
+                padding-right: 3px;
+                padding-bottom: 8px;
+
+            }
+            span a{
+                text-decoration: none;
+                color: #3B5998;
+            }
+            span:hover{
+                text-decoration: underline;
+            }
+            div{
+
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        {% load static %}
+        <div id="body">
+            <div id="header">
+                <div id="heading"><h1>Friends Link</h1></div>
+            </div>
+
+            <div id="img">
+                <img style="width: 50%;" src="{% static "image/logo.jpg"%}" alt="Image Not Found"/>
+            </div>
+
+            <div id="create">
+                <span style="font-size: 40px; text-decoration: none;"><b>Create a new account</b></span><br><span style="font-size: 22px; text-decoration: none;">free for you.</span><br><br><br>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                <input style="width: 197px; height: 40px; border: 2px solid #DFE3EE; border-radius: 5px; margin: 2px; padding: 8px; font-size: 15px; font-family:cursive;" type="text" name="firstname" placeholder="firstname" />
+                <input style="width: 197px; height: 40px; border: 2px solid #DFE3EE; border-radius: 5px; margin: 2px; padding: 8px; font-size: 15px; font-family:cursive;" type="text" name="lastname" placeholder="lastname" /><br>
+                <input style="width: 400px; height: 40px; border: 2px solid #DFE3EE; border-radius: 5px; margin: 2px; padding: 8px; font-size: 15px; font-family:cursive;" type="text" name="email" placeholder="Email" /><br>
+                <input style="width: 400px; height: 40px; border: 2px solid #DFE3EE; border-radius: 5px; margin: 2px; padding: 8px; font-size: 15px; font-family:cursive;" type="password" placeholder="password" name="passwd" id="inp" onkeydown="myFunction()" onkeyup="myFunction()" /><br>
+                <span id="demo"></span>
+                <progress value="0" max="100" id="strength" style="width: 300px; background-color:white; color: green"></progress><br>
+                <span style="font-size: 27px; margin: 10px; text-decoration: none;">Birthday</span><br>
+
+                <select name="dobd" style="width: 60px; height: 30px; margin-top: 8px;">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option selected>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                <select name="dobm" style="width: 80px; height: 30px; margin-top: 8px;">
+                    <option>JAN</option>
+                    <option>FEB</option>
+                    <option>MAR</option>
+                    <option>APR</option>
+                    <option>MAY</option>
+                    <option>JUNE</option>
+                    <option>JULY</option>
+                    <option>AUG</option>
+                    <option selected>SEPT</option>
+                    <option>OCT</option>
+                    <option>NOV</option>
+                    <option>DEC</option>
+                </select>
+                <select name="doby" style="width: 60px; height: 30px; margin-top: 8px;">
+                    <option>1950</option>
+                    <option>1951</option>
+                    <option>1952</option>
+                    <option>1953</option>
+                    <option>1954</option>
+                    <option>1955</option>
+                    <option>1957</option>
+                    <option>1958</option>
+                    <option>1959</option>
+                    <option>1960</option>
+                    <option>1961</option>
+                    <option>1962</option>
+                    <option>1963</option>
+                    <option>1964</option>
+                    <option>1965</option>
+                    <option>1966</option>
+                    <option>1967</option>
+                    <option>1968</option>
+                    <option>1969</option>
+                    <option>1970</option>
+                    <option>1971</option>
+                    <option>1972</option>
+                    <option>1973</option>
+                    <option>1974</option>
+                    <option>1975</option>
+                    <option>1976</option>
+                    <option>1977</option>
+                    <option>1978</option>
+                    <option>1979</option>
+                    <option>1980</option>
+                    <option>1981</option>
+                    <option>1982</option>
+                    <option>1983</option>
+                    <option>1984</option>
+                    <option>1985</option>
+                    <option>1986</option>
+                    <option>1987</option>
+                    <option>1988</option>
+                    <option>1989</option>
+                    <option>1990</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                    <option>1999</option>
+                    <option selected>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                <input type="file" name="myfile" required>
+
+
+
+                <input type="radio" name="gender" value="female"/><span style="font-size: 22px; text-decoration: none;">Female</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="male"/><span style="font-size: 22px; text-decoration: none;"> Male</span><br><br>
+
+                <input style="width: 200px; height: 40px; color: white; background: green; border-radius: 9px;" type="submit" name="sign" value="Sign Up"/></form><br><br><br>
+
+                 <h1> Have an account?<a href="http://127.0.0.1:8000/login/"> click here</a>
+                 </div>
+               </div>
+        
+
+      <script type="text/javascript">
+      document.getElementById('strength').style.display = "none";
+    </script>
+    </body>
+</html>

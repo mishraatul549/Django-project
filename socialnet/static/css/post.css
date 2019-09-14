@@ -1,0 +1,66 @@
+.left1{
+	 float: left;
+	 width: 22%;
+	 margin-left: 25px;
+	 height: 100%;
+	}
+	.middle1{
+	  float: left;
+	  width: 52%;
+	  background-color:    #f2f2f2;
+	  margin-left: 10px;
+	  margin-right: 10px;
+
+	}
+	.right1{
+	  float: left;
+	  background-color: grey;
+	  width: 13%;
+	  margin-right: 25px;
+
+
+	}
+	.stories{
+
+	   float: top;
+	   height: 35%;
+	   overflow-x: scroll;
+	   background-color: white;
+	}
+	.online{
+
+
+	   float: top;
+	   height: 35%;
+	   overflow-x: scroll;
+	   background-color: white;
+
+	}
+
+
+	.div21{
+	    background-color: white;
+	    margin:5px 5px;
+	    border: 2px solid rgba(10, 0, 0,0.6);
+	    border-radius: 10px;
+	}
+	.div212{
+	  position: relative;
+	}
+	.postimage{
+	    margin: auto;
+	    display: block;
+	    padding: 10px;
+	    height: auto;
+	    width: 90%;
+	}
+	.div211{
+	  padding-left:10px;
+	  background-color: white;
+	  border-bottom:1px solid rgba(10, 0, 0,0.1);
+	}
+	.lico{
+	  float: left;
+	  width:36%;
+	  height: auto;
+	}

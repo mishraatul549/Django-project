@@ -1,0 +1,35 @@
+.acceptrequest{
+    float:right;
+    margin-right:50px;
+}
+.sendrequest{
+    float:left;
+    margin-left:50px;
+
+}
+.profile{
+    height:30px;
+    width:30px;
+    border:1px solid black;
+}
+.friend{
+    border: 2px solid rgb(160, 225, 164);
+    padding-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:0px;
+    border-radius : 10px;
+}
+.friendright{
+    border: 2px solid rgb(160, 225, 164);
+    padding-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:30px;
+    border-radius: 10px;
+
+}
+.disableBtn{
+    color:white;
+    background-color: blue;
+}

@@ -1,0 +1,42 @@
+
+.div21{
+    background-color: white;
+    margin:5px 5px;
+}
+.div212{
+  position: relative;
+}
+.main{
+  overflow:hidden;
+
+}
+.parent { position:absolute; }
+.child { position:fixed; width:960px; }
+.postimage{
+    margin: auto;
+    display: block;
+    padding: 10px;
+    height: auto;
+    width: 90%;
+}
+.div211{
+  padding-left:10px;
+  background-color: white;
+  border-bottom:1px solid rgba(10, 0, 0,0.1);
+}
+.middle1{
+  float: left;
+  width: 60%;
+  background-color:    #f2f2f2;
+  margin-left: 10px;
+  margin-right: 10px;
+  height:400px;
+  position:relative; width:1280px; 
+}
+.lico{
+  float: left;
+  width:30%;
+  height: auto;
+  position: fixed;
+  overflow:scroll;
+}
