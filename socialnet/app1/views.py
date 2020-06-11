@@ -43,7 +43,11 @@ def login1(request):
 
 
     else:
-        return render(request,'login.html',{})
+        try:
+            name  = request.session["name"]
+            return redirect("http://127.0.0.1:8000/homepage")
+        except:
+            return render(request,'login.html',{})
 
 def homepage(request):
     try:
@@ -91,7 +95,7 @@ def viewpost(request,id,):
     comments = comment.objects.filter(postid=a)
     try:
         a1=like.objects.get(postid=id,userid=request.session["name"])
-        print("Like")
+        # print("Like")
         likedone=True
     except:
         pass
@@ -216,4 +220,10 @@ def logout(request):
     except:
         pass
     return redirect('http://127.0.0.1:8000/login')
-    
+
+def editsettings(request):
+    try:
+        name = request.session["name"]
+        return render(request,'editsetting.html')
+    except:
+        return render(request,'login.html')

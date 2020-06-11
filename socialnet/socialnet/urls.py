@@ -37,6 +37,7 @@ urlpatterns = [
     path('showfriend/',showfriend),
     path('chatting/',chatting),
     path('logout/',logout),
+    path('settings/',editsettings)
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
